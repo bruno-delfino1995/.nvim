@@ -1,3 +1,4 @@
+require("user.neovide")
 require("user.plugins")
 require("user.impatient")
 require("user.options")
