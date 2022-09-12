@@ -2,7 +2,8 @@
 
 -- Base Settings {{{
 
-vim.opt.shell = "/bin/sh"
+vim.opt.shell = "/bin/zsh"
+vim.opt.mouse = "a"
 vim.cmd("filetype off") -- do not load $runtime/filetype.vim files
 vim.cmd("filetype plugin indent on") -- auto load plugin filetypes and indent specs
 vim.cmd("syntax on") -- enable syntax highlighting
@@ -56,7 +57,7 @@ vim.opt.showmode = false -- show current mode.
 vim.opt.wrap = false -- do not wrap long lines
 vim.opt.lazyredraw = true -- disables unnecessary redrawings, like on middle of macros
 vim.opt.laststatus = 2 -- controls whether to show the bottom status line
-vim.opt.showtabline = 0 -- never shows tab line
+vim.opt.showtabline = 1 -- shows tabline when there's more than one tab
 vim.opt.list = true -- show invisible characters
 vim.opt.listchars = { tab = "<->", eol = "¬", trail = "~", extends = ">", precedes = "<", nbsp = "%" } -- invisible characters representation
 -- vim.opt.listchars:append({ space = "·" })
