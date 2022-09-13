@@ -4,6 +4,7 @@
 
 vim.opt.shell = "/bin/zsh"
 vim.opt.mouse = "a"
+vim.opt.termguicolors = true
 vim.cmd("filetype off") -- do not load $runtime/filetype.vim files
 vim.cmd("filetype plugin indent on") -- auto load plugin filetypes and indent specs
 vim.cmd("syntax on") -- enable syntax highlighting
