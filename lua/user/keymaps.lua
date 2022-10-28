@@ -84,6 +84,5 @@ keymap("n", "<leader>fg", "<CMD>Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fb", "<CMD>Telescope buffers<CR>", opts)
 keymap("n", "<leader>fh", "<CMD>Telescope help_tags<CR>", opts)
 
--- Nvimtree
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
-keymap("n", "-", "<CMD>lua require('nvim-tree').open_replacing_current_buffer()<CR>", opts)
+-- File browser
+keymap("n", "-", "<cmd>lua require('telescope').extensions.file_browser.file_browser({ path = '%:p:h' })<cr>", opts)

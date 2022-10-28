@@ -47,6 +47,8 @@ return packer.startup({
 		-- fuzzy search everything
 		use "nvim-telescope/telescope.nvim"
 
+		use "nvim-telescope/telescope-file-browser.nvim"
+
 		-- manage your projects easily
 		use "ahmedkhalf/project.nvim"
 
@@ -158,8 +160,6 @@ return packer.startup({
 		-- tree with fruits
 		use "kyazdani42/nvim-web-devicons"
 
-		-- what better than a tree to explore?
-		use "kyazdani42/nvim-tree.lua"
 	end,
 	config = { git = { clone_timeout = 120 } }
 })
