@@ -3,7 +3,6 @@ if not status_ok then
 	return
 end
 
-
 which_key.setup({
 	plugins = {
 		marks = true, -- shows a list of your marks on ' and `
@@ -224,8 +223,8 @@ local mappings = {
 			"Info",
 		},
 		I = {
-			"<cmd>LspInstallInfo<cr>",
-			"Installer Info",
+			"<cmd>Mason<cr>",
+			"Installer"
 		},
 		j = {
 			"<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",

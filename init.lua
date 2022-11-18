@@ -1,5 +1,6 @@
 require("user.neovide")
 require("user.plugins")
+require("user.packages")
 require("user.impatient")
 require("user.options")
 require("user.keymaps")

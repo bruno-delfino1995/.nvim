@@ -15,8 +15,11 @@ packer.init {
 -- Install your plugins here
 return packer.startup({
 	function(use)
-		-- Packer can manage itself
+		-- plugin manager that can manage itself
 		use "wbthomason/packer.nvim"
+
+		-- simple to use package installer
+		use "williamboman/mason.nvim"
 
 		-- speed up your editor startup so you can have more meetings
 		use "lewis6991/impatient.nvim"
@@ -139,8 +142,8 @@ return packer.startup({
 		-- enable LSP
 		use "neovim/nvim-lspconfig"
 
-		-- simple to use language server installer
-		use "williamboman/nvim-lsp-installer"
+		-- bridge the gap between lsp client and lsp server installation
+		use "williamboman/mason-lspconfig.nvim"
 
 		-- don't leave your delimiters alone, integrates with both cmp and treesitter
 		use "windwp/nvim-autopairs"
