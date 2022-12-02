@@ -121,6 +121,9 @@ return packer.startup({
 		-- gruvbox with tree-sitter support
 		use "folke/tokyonight.nvim"
 
+		-- snippets engine
+		use "L3MON4D3/LuaSnip"
+
 		-- completion plugin
 		use "hrsh7th/nvim-cmp"
 
@@ -138,6 +141,9 @@ return packer.startup({
 
 		-- nvim lua api completions
 		use "hrsh7th/cmp-nvim-lua"
+
+ 		-- snippet completions
+ 		use "saadparwaiz1/cmp_luasnip"
 
 		-- enable LSP
 		use "neovim/nvim-lspconfig"
