@@ -45,12 +45,13 @@ return packer.startup({
 		use "p00f/nvim-ts-rainbow"
 
 		-- extension for native fzf
-		use {"nvim-telescope/telescope-fzf-native.nvim", run = "make" }
+		use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
 
 		-- fuzzy search everything
 		use "nvim-telescope/telescope.nvim"
 
-		use "nvim-telescope/telescope-file-browser.nvim"
+		-- file explorer from need for speed
+		use "SidOfc/carbon.nvim"
 
 		-- manage your projects easily
 		use "ahmedkhalf/project.nvim"
@@ -142,8 +143,8 @@ return packer.startup({
 		-- nvim lua api completions
 		use "hrsh7th/cmp-nvim-lua"
 
- 		-- snippet completions
- 		use "saadparwaiz1/cmp_luasnip"
+		-- snippet completions
+		use "saadparwaiz1/cmp_luasnip"
 
 		-- enable LSP
 		use "neovim/nvim-lspconfig"

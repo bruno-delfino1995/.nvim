@@ -64,4 +64,4 @@ keymap("x", "<A-j>", ":move '>+1<cr>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<cr>gv-gv", opts)
 
 -- File browser
-keymap("n", "-", "<cmd>lua require('telescope').extensions.file_browser.file_browser({ path = '%:p:h' })<cr>", opts)
+keymap("n", "-", ":Carbon!<cr>", opts)

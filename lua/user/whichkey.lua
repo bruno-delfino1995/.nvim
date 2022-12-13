@@ -88,7 +88,7 @@ local mappings = {
 		"Buffers",
 	},
 	["-"] = {
-		"<cmd>lua require('telescope').extensions.file_browser.file_browser()<cr>",
+		"<cmd>Carbon<cr>",
 		"Explorer",
 	},
 	["w"] = {
