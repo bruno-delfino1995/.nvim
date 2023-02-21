@@ -18,6 +18,9 @@ return packer.startup({
 		-- plugin manager that can manage itself
 		use "wbthomason/packer.nvim"
 
+		-- icons for your filetypes
+		use "kyazdani42/nvim-web-devicons"
+
 		-- simple to use package installer
 		use "williamboman/mason.nvim"
 
@@ -75,7 +78,7 @@ return packer.startup({
 		use "nvim-lualine/lualine.nvim"
 
 		-- manipulate comments
-		use "numToStr/Comment.nvim"
+		use "terrortylor/nvim-comment"
 
 		-- context aware comments
 		use "JoosepAlviste/nvim-ts-context-commentstring"
@@ -96,7 +99,7 @@ return packer.startup({
 		use "tpope/vim-sensible"
 
 		-- starting point for your vim session with recent files
-		use "mhinz/vim-startify"
+		use "goolord/alpha-nvim"
 
 		-- no more linear undo
 		use "mbbill/undotree"
@@ -119,7 +122,7 @@ return packer.startup({
 		-- text object for entire buffer
 		use "kana/vim-textobj-entire"
 
-		-- gruvbox with tree-sitter support
+		-- theme for the night owl
 		use "folke/tokyonight.nvim"
 
 		-- snippets engine
@@ -160,10 +163,6 @@ return packer.startup({
 
 		-- git ware (porcelain in progress) for nvim
 		use "TimUntersberger/neogit"
-
-		-- tree with fruits
-		use "kyazdani42/nvim-web-devicons"
-
 	end,
 	config = { git = { clone_timeout = 120 } }
 })
