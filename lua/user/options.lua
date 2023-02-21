@@ -2,18 +2,18 @@
 
 -- Base Settings {{{
 
-vim.opt.shell = "/bin/zsh"
-vim.opt.mouse = "a"
+vim.opt.shell = '/bin/zsh'
+vim.opt.mouse = 'a'
 vim.opt.termguicolors = true
-vim.cmd("filetype off") -- do not load $runtime/filetype.vim files
-vim.cmd("filetype plugin indent on") -- auto load plugin filetypes and indent specs
-vim.cmd("syntax on") -- enable syntax highlighting
+vim.cmd 'filetype off' -- do not load $runtime/filetype.vim files
+vim.cmd 'filetype plugin indent on' -- auto load plugin filetypes and indent specs
+vim.cmd 'syntax on' -- enable syntax highlighting
 vim.opt.errorbells = false -- no beeps
-vim.opt.backspace = { "indent", "eol", "start" } -- makes backspace key more powerful.
-vim.opt.clipboard = "unnamedplus" -- use X11 Clipboard
+vim.opt.backspace = { 'indent', 'eol', 'start' } -- makes backspace key more powerful.
+vim.opt.clipboard = 'unnamedplus' -- use X11 Clipboard
 vim.opt.autoread = true -- automatically reread changed files without asking me anything
-vim.opt.fileformats = { "unix", "dos", "mac" } -- prefer Unix over Windows over OS 9 formats
-vim.opt.encoding = "utf-8" -- set default encoding to UTF-8
+vim.opt.fileformats = { 'unix', 'dos', 'mac' } -- prefer Unix over Windows over OS 9 formats
+vim.opt.encoding = 'utf-8' -- set default encoding to UTF-8
 vim.opt.ttyfast = true -- improves performance of redrawing by signalizing a fast terminal connection
 vim.opt.wildmenu = true -- show a menu for tab completion
 vim.opt.modeline = true -- allow lines on extremities to contain vim config - `vim:foldmethod=marker:foldlevel=0`
@@ -23,8 +23,8 @@ vim.opt.joinspaces = false -- prevents double spaces after punctuation when join
 vim.opt.linebreak = true -- makes vim break line only on whitespaces
 vim.opt.autoindent = true -- start next line at same level as current
 vim.opt.smartindent = true -- guess the next indenting and start the line correctly
-vim.opt.sessionoptions = { "blank", "curdir", "folds", "help", "tabpages", "winsize" } -- what to persist on :mksession
-vim.opt.signcolumn = "number" -- merge signcolumn and number column into one
+vim.opt.sessionoptions = { 'blank', 'curdir', 'folds', 'help', 'tabpages', 'winsize' } -- what to persist on :mksession
+vim.opt.signcolumn = 'number' -- merge signcolumn and number column into one
 
 -- }}}
 
@@ -36,16 +36,16 @@ vim.opt.writebackup = false -- don't write backups befory overwriting the actual
 
 -- vim.opt.updatetime = 300 -- lower value for swap write wait threshold
 vim.opt.undofile = true -- allow undos even after file has been closed and reopened
-vim.opt.backupdir = { "/var/tmp", "/tmp" }
-vim.opt.backupskip= { "/tmp/*", "/private/tmp/*" }
+vim.opt.backupdir = { '/var/tmp', '/tmp' }
+vim.opt.backupskip = { '/tmp/*', '/private/tmp/*' }
 
 -- }}}
 
 -- Cursor Configuration {{{
 
-vim.o.t_SI = "\\<Esc>[6 q" -- pipe on insert
-vim.o.t_SR = "\\<Esc>[4 q" -- underscore on replace
-vim.o.t_EI = "\\<Esc>[2 q" -- block on everything else
+vim.o.t_SI = '\\<Esc>[6 q' -- pipe on insert
+vim.o.t_SR = '\\<Esc>[4 q' -- underscore on replace
+vim.o.t_EI = '\\<Esc>[2 q' -- block on everything else
 
 -- }}}
 
@@ -60,11 +60,11 @@ vim.opt.lazyredraw = true -- disables unnecessary redrawings, like on middle of 
 vim.opt.laststatus = 2 -- controls whether to show the bottom status line
 vim.opt.showtabline = 1 -- shows tabline when there's more than one tab
 vim.opt.list = true -- show invisible characters
-vim.opt.listchars = { tab = "<->", eol = "¬", trail = "~", extends = ">", precedes = "<", nbsp = "%" } -- invisible characters representation
+vim.opt.listchars = { tab = '<->', eol = '¬', trail = '~', extends = '>', precedes = '<', nbsp = '%' } -- invisible characters representation
 -- vim.opt.listchars:append({ space = "·" })
 vim.opt.cmdheight = 2 -- more space for displaying messages.
-vim.opt.shortmess:append("c") -- don't display messages about completions
-vim.opt.signcolumn = "yes" -- always show sign column
+vim.opt.shortmess:append 'c' -- don't display messages about completions
+vim.opt.signcolumn = 'yes' -- always show sign column
 
 -- vertical/horizontal scroll off settings
 vim.opt.scrolloff = 3
@@ -87,7 +87,7 @@ vim.opt.shiftwidth = 2 -- number of spaces by indent
 vim.opt.tabstop = 2 -- number of visual spaces per TAB
 vim.opt.softtabstop = 2 -- number of spaces in tab when editing
 vim.opt.foldenable = true -- enable folding
-vim.opt.foldmethod = "indent" -- fold based on indent level
+vim.opt.foldmethod = 'indent' -- fold based on indent level
 vim.opt.foldlevelstart = 5 -- open 10 folds by default
 vim.opt.foldnestmax = 10 -- limits folds to 10
 
@@ -105,6 +105,6 @@ vim.opt.smartcase = true -- ... but not when search pattern contains upper case 
 
 -- Completion Settings {{{
 
-vim.opt.completeopt= { "menuone", "noinsert", "preview" }
+vim.opt.completeopt = { 'menuone', 'noinsert', 'preview' }
 
 -- }}}
