@@ -1,4 +1,40 @@
 return {
+  -- context aware comments
+  {
+    'JoosepAlviste/nvim-ts-context-commentstring',
+    name = 'ts_context_commentstring',
+  },
+
+  -- manipulate comments
+  {
+    'terrortylor/nvim-comment',
+    name = 'nvim_comment',
+  },
+
+  -- prettier folds from the outer world
+  {
+    'kevinhwang91/nvim-ufo',
+    name = 'ufo',
+    dependencies = {
+      'kevinhwang91/promise-async',
+      'nvim-treesitter/nvim-treesitter',
+    },
+    init = function()
+      local ufo = require 'ufo'
+
+      -- Using ufo provider need remap `zR` and `zM`. If Neovim is 0.6.1, remap yourself
+      vim.keymap.set('n', 'zR', ufo.openAllFolds)
+      vim.keymap.set('n', 'zM', ufo.closeAllFolds)
+      vim.keymap.set('n', 'zr', ufo.openFoldsExceptKinds)
+      vim.keymap.set('n', 'zm', ufo.closeFoldsWith)
+    end,
+    opts = {
+      provider_selector = function()
+        return { 'treesitter', 'indent' }
+      end,
+    },
+  },
+
   -- language parsing from the future
   {
     'nvim-treesitter/nvim-treesitter',
@@ -41,24 +77,6 @@ return {
 
   -- match delimiters with colors
   'p00f/nvim-ts-rainbow',
-
-	-- context aware comments
-	{
-		'JoosepAlviste/nvim-ts-context-commentstring',
-		name = 'ts_context_commentstring'
-	},
-
-  -- manipulate comments
-  {
-    'terrortylor/nvim-comment',
-    name = 'nvim_comment',
-		dependencies = 'ts_context_commentstring',
-		opts = {
-			hook = function()
-				require("ts_context_commentstring.internal").update_commentstring()
-			end
-		}
-  },
 
   -- don't leave your delimiters alone, integrates with both cmp and treesitter
   {

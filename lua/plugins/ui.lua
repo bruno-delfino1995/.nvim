@@ -130,12 +130,6 @@ return {
         },
       }
 
-      local filetype = {
-        'filetype',
-        icons_enabled = false,
-        icon = nil,
-      }
-
       local branch = {
         'branch',
         icons_enabled = true,
@@ -144,7 +138,6 @@ return {
 
       local location = {
         'location',
-        padding = 0,
       }
 
       local progress = function()
@@ -154,10 +147,6 @@ return {
         local line_ratio = current_line / total_lines
         local index = math.ceil(line_ratio * #chars)
         return chars[index]
-      end
-
-      local spaces = function()
-        return 'spaces: ' .. vim.api.nvim_buf_get_option(0, 'shiftwidth')
       end
 
       lualine.setup {
@@ -172,12 +161,37 @@ return {
         sections = {
           lualine_a = { mode },
           lualine_b = { filename },
-          lualine_c = { filetype, spaces, 'encoding' },
+          lualine_c = {},
           lualine_x = { branch, diff },
           lualine_y = { diagnostics },
           lualine_z = { location, progress },
         },
       }
     end,
+  },
+
+  -- what's the LSP doing?
+  {
+    'j-hui/fidget.nvim',
+    config = true,
+  },
+
+  -- just because they're errors doesn't mean they have to be ugly
+  {
+    'folke/trouble.nvim',
+    requires = 'nvim-tree/nvim-web-devicons',
+    config = true,
+  },
+
+  -- no more neck pain for focused work
+  {
+    'folke/zen-mode.nvim',
+    config = true,
+  },
+
+  -- focus only on what you're editing
+  {
+    'folke/twilight.nvim',
+    config = true,
   },
 }

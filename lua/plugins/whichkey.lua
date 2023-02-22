@@ -80,11 +80,11 @@ return {
       }
 
       local mappings = {
-        ['a'] = {
+        a = {
           '<cmd>Startify<cr>',
           'Dashboard',
         },
-        ['b'] = {
+        b = {
           "<cmd>lua require('telescope.builtin').buffers()<cr>",
           'Buffers',
         },
@@ -92,57 +92,38 @@ return {
           '<cmd>Carbon<cr>',
           'Explorer',
         },
-        ['w'] = {
+        w = {
           '<cmd>w!<cr>',
           'Save',
         },
-        ['q'] = {
+        q = {
           '<cmd>q!<cr>',
           'Quit',
         },
-        ['c'] = {
+        c = {
           '<cmd>Bdelete!<cr>',
           'Close Buffer',
         },
-        ['h'] = {
+        h = {
           '<cmd>nohlsearch<cr>',
           'No Highlight',
         },
-        ['f'] = {
+        f = {
           "<cmd>lua require('telescope.builtin').find_files()<cr>",
           'Find files',
         },
-        ['F'] = {
+        F = {
           '<cmd>Telescope live_grep<cr>',
           'Find Text',
         },
-        ['P'] = {
+        P = {
           '<cmd>Telescope projects<cr>',
           'Projects',
         },
 
         p = {
-          name = 'Packer',
-          c = {
-            '<cmd>PackerCompile<cr>',
-            'Compile',
-          },
-          i = {
-            '<cmd>PackerInstall<cr>',
-            'Install',
-          },
-          s = {
-            '<cmd>PackerSync<cr>',
-            'Sync',
-          },
-          S = {
-            '<cmd>PackerStatus<cr>',
-            'Status',
-          },
-          u = {
-            '<cmd>PackerUpdate<cr>',
-            'Update',
-          },
+          '<cmd>Lazy<cr>',
+          'Lazy',
         },
 
         g = {
@@ -290,6 +271,18 @@ return {
           C = {
             '<cmd>Telescope commands<cr>',
             'Command',
+          },
+        },
+
+        t = {
+          name = 'Toggle',
+          z = {
+            '<cmd>ZenMode<cr>',
+            'Zen',
+          },
+          t = {
+            '<cmd>Twilight<cr>',
+            'Twilight',
           },
         },
       }
