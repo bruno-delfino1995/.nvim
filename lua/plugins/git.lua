@@ -3,9 +3,9 @@ return {
   {
     'TimUntersberger/neogit',
     config = function()
-      local neogit = require 'neogit'
+      local neogit = require('neogit')
 
-      neogit.setup {
+      neogit.setup({
         disable_signs = false,
         disable_hint = false,
         disable_context_highlighting = false,
@@ -81,7 +81,7 @@ return {
             -- ["s"] = "",
           },
         },
-      }
+      })
     end,
   },
 

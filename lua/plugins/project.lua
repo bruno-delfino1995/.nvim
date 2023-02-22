@@ -4,9 +4,9 @@ return {
     'ahmedkhalf/project.nvim',
     dependencies = 'nvim-telescope/telescope.nvim',
     config = function()
-      local project = require 'project_nvim'
+      local project = require('project_nvim')
 
-      project.setup {
+      project.setup({
         -- Manual mode doesn't automatically change your root directory, so you have
         -- the option to manually do so using `:ProjectRoot` command.
         manual_mode = false,
@@ -38,12 +38,12 @@ return {
 
         -- Path where project.nvim will store the project history for use in
         -- telescope
-        datapath = vim.fn.stdpath 'data',
-      }
+        datapath = vim.fn.stdpath('data'),
+      })
 
-      local telescope = require 'telescope'
+      local telescope = require('telescope')
 
-      telescope.load_extension 'projects'
+      telescope.load_extension('projects')
     end,
   },
 }

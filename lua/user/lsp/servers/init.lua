@@ -10,20 +10,20 @@ local base_opts = {
   capabilities = require('user.lsp.handlers').capabilities,
 }
 
-mason_lsp.setup_handlers {
+mason_lsp.setup_handlers({
   function(server_name)
     require('lspconfig')[server_name].setup(base_opts)
   end,
   ['lua_ls'] = function()
-    local additional_opts = require 'user.lsp.servers.lua_ls'
+    local additional_opts = require('user.lsp.servers.lua_ls')
     local opts = vim.tbl_deep_extend('force', additional_opts, base_opts)
 
     require('lspconfig').lua_ls.setup(opts)
   end,
   ['jsonls'] = function()
-    local additional_opts = require 'user.lsp.servers.jsonls'
+    local additional_opts = require('user.lsp.servers.jsonls')
     local opts = vim.tbl_deep_extend('force', additional_opts, base_opts)
 
     require('lspconfig').jsonls.setup(opts)
   end,
-}
+})

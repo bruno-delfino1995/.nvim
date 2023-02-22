@@ -3,8 +3,8 @@ return {
   {
     'folke/which-key.nvim',
     config = function()
-      local which_key = require 'which-key'
-      which_key.setup {
+      local which_key = require('which-key')
+      which_key.setup({
         plugins = {
           marks = true, -- shows a list of your marks on ' and `
           registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
@@ -68,7 +68,7 @@ return {
           i = { 'j', 'k' },
           v = { 'j', 'k' },
         },
-      }
+      })
 
       local opts = {
         mode = 'n', -- NORMAL mode

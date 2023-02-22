@@ -20,7 +20,7 @@ return {
       'nvim-treesitter/nvim-treesitter',
     },
     init = function()
-      local ufo = require 'ufo'
+      local ufo = require('ufo')
 
       -- Using ufo provider need remap `zR` and `zM`. If Neovim is 0.6.1, remap yourself
       vim.keymap.set('n', 'zR', ufo.openAllFolds)
@@ -39,12 +39,12 @@ return {
   {
     'nvim-treesitter/nvim-treesitter',
     build = function()
-      require('nvim-treesitter.install').update { with_sync = true }
+      require('nvim-treesitter.install').update({ with_sync = true })
     end,
     config = function()
-      local configs = require 'nvim-treesitter.configs'
+      local configs = require('nvim-treesitter.configs')
 
-      configs.setup {
+      configs.setup({
         ensure_installed = 'all', -- one of "all", "maintained" (parsers with maintainers), or a list of languages
         sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
         ignore_install = { '' }, -- list of parsers to ignore installing
@@ -71,7 +71,7 @@ return {
           enable = true,
           enable_autocmd = false,
         },
-      }
+      })
     end,
   },
 
@@ -82,9 +82,9 @@ return {
   {
     'windwp/nvim-autopairs',
     config = function()
-      local npairs = require 'nvim-autopairs'
+      local npairs = require('nvim-autopairs')
 
-      npairs.setup {
+      npairs.setup({
         check_ts = true,
         ts_config = {
           lua = { 'string', 'source' },
@@ -92,15 +92,15 @@ return {
           java = false,
         },
         disable_filetype = { 'TelescopePrompt' },
-      }
+      })
 
       local cmp_status_ok, cmp = pcall(require, 'cmp')
       if not cmp_status_ok then
         return
       end
 
-      local cmp_autopairs = require 'nvim-autopairs.completion.cmp'
-      cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done { map_char = { tex = '' } })
+      local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+      cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done({ map_char = { tex = '' } }))
     end,
   },
 

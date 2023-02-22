@@ -7,7 +7,7 @@ return {
     'goolord/alpha-nvim',
     dependencies = 'kyazdani42/nvim-web-devicons',
     config = function()
-      local alpha = require 'alpha'
+      local alpha = require('alpha')
       alpha.setup(require('alpha.themes.startify').config)
     end,
   },
@@ -16,7 +16,7 @@ return {
   {
     'lukas-reineke/indent-blankline.nvim',
     config = function()
-      local indent_blankline = require 'indent_blankline'
+      local indent_blankline = require('indent_blankline')
 
       vim.g.indent_blankline_buftype_exclude = { 'terminal', 'nofile' }
       vim.g.indent_blankline_filetype_exclude = {
@@ -71,7 +71,7 @@ return {
       -- vim.opt.listchars:append "space:"
       -- vim.opt.listchars:append "eol:↴"
 
-      indent_blankline.setup {
+      indent_blankline.setup({
         -- show_end_of_line = true,
         -- space_char_blankline = " ",
         show_current_context = true,
@@ -81,7 +81,7 @@ return {
         --   "IndentBlanklineIndent2",
         --   "IndentBlanklineIndent3",
         -- },
-      }
+      })
     end,
   },
 
@@ -90,7 +90,7 @@ return {
     'nvim-lualine/lualine.nvim',
     dependencies = 'kyazdani42/nvim-web-devicons',
     config = function()
-      local lualine = require 'lualine'
+      local lualine = require('lualine')
 
       local hide_in_width = function()
         return vim.fn.winwidth(0) > 80
@@ -141,15 +141,15 @@ return {
       }
 
       local progress = function()
-        local current_line = vim.fn.line '.'
-        local total_lines = vim.fn.line '$'
+        local current_line = vim.fn.line('.')
+        local total_lines = vim.fn.line('$')
         local chars = { '▁▁', '▂▂', '▃▃', '▄▄', '▅▅', '▆▆', '▇▇', '██' }
         local line_ratio = current_line / total_lines
         local index = math.ceil(line_ratio * #chars)
         return chars[index]
       end
 
-      lualine.setup {
+      lualine.setup({
         options = {
           icons_enabled = true,
           theme = 'auto',
@@ -166,7 +166,7 @@ return {
           lualine_y = { diagnostics },
           lualine_z = { location, progress },
         },
-      }
+      })
     end,
   },
 

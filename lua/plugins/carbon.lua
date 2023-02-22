@@ -5,10 +5,10 @@ return {
   {
     'SidOfc/carbon.nvim',
     config = function()
-      local carbon = require 'carbon'
-      carbon.setup {
+      local carbon = require('carbon')
+      carbon.setup({
         auto_open = false,
-      }
+      })
     end,
   },
 }

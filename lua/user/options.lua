@@ -5,9 +5,9 @@
 vim.opt.shell = '/bin/zsh'
 vim.opt.mouse = 'a'
 vim.opt.termguicolors = true
-vim.cmd 'filetype off' -- do not load $runtime/filetype.vim files
-vim.cmd 'filetype plugin indent on' -- auto load plugin filetypes and indent specs
-vim.cmd 'syntax on' -- enable syntax highlighting
+vim.cmd('filetype off') -- do not load $runtime/filetype.vim files
+vim.cmd('filetype plugin indent on') -- auto load plugin filetypes and indent specs
+vim.cmd('syntax on') -- enable syntax highlighting
 vim.opt.errorbells = false -- no beeps
 vim.opt.backspace = { 'indent', 'eol', 'start' } -- makes backspace key more powerful.
 vim.opt.clipboard = 'unnamedplus' -- use X11 Clipboard
@@ -63,7 +63,7 @@ vim.opt.list = true -- show invisible characters
 vim.opt.listchars = { tab = '<->', eol = '¬', trail = '~', extends = '>', precedes = '<', nbsp = '%' } -- invisible characters representation
 -- vim.opt.listchars:append({ space = "·" })
 vim.opt.cmdheight = 2 -- more space for displaying messages.
-vim.opt.shortmess:append 'c' -- don't display messages about completions
+vim.opt.shortmess:append('c') -- don't display messages about completions
 vim.opt.signcolumn = 'yes' -- always show sign column
 
 -- vertical/horizontal scroll off settings
