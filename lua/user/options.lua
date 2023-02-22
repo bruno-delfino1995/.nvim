@@ -87,10 +87,10 @@ vim.opt.shiftwidth = 2 -- number of spaces by indent
 vim.opt.tabstop = 2 -- number of visual spaces per TAB
 vim.opt.softtabstop = 2 -- number of spaces in tab when editing
 vim.opt.foldenable = true -- enable folding
-vim.opt.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
-vim.opt.foldcolumn = '1' -- '0' is not bad
-vim.opt.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.opt.foldcolumn = '0' -- omit the foldcolumn
+vim.opt.foldlevel = 99 -- Using ufo provider need a large value
 vim.opt.foldlevelstart = 99
+vim.opt.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 
 -- }}}
 

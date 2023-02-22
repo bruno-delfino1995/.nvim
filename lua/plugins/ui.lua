@@ -188,10 +188,4 @@ return {
     'folke/zen-mode.nvim',
     config = true,
   },
-
-  -- focus only on what you're editing
-  {
-    'folke/twilight.nvim',
-    config = true,
-  },
 }
