@@ -9,6 +9,7 @@ return {
   {
     'terrortylor/nvim-comment',
     name = 'nvim_comment',
+    config = true,
   },
 
   -- prettier folds from the outer world
@@ -38,6 +39,7 @@ return {
   -- language parsing from the future
   {
     'nvim-treesitter/nvim-treesitter',
+    dependencies = 'ts_context_commentstring',
     build = function()
       require('nvim-treesitter.install').update({ with_sync = true })
     end,
