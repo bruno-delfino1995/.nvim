@@ -81,6 +81,7 @@ M.on_attach = function(client, bufnr)
   if client.name ~= 'null-ls' then
     client.server_capabilities.document_formatting = false
   end
+
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
 end

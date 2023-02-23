@@ -7,6 +7,7 @@ return {
     dependencies = {
       'nvim-lua/plenary.nvim',
       'nvim-telescope/telescope-fzf-native.nvim',
+      'stevearc/aerial.nvim',
     },
     config = function()
       local telescope = require('telescope')
@@ -112,6 +113,7 @@ return {
       })
 
       telescope.load_extension('fzf')
+      telescope.load_extension('aerial')
     end,
   },
 

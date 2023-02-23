@@ -229,7 +229,7 @@ return {
             'Rename',
           },
           s = {
-            '<cmd>Telescope lsp_document_symbols<cr>',
+            '<cmd>Telescope aerial<cr>',
             'Document Symbols',
           },
           S = {
