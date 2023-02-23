@@ -6,6 +6,7 @@ return {
   {
     'goolord/alpha-nvim',
     dependencies = 'kyazdani42/nvim-web-devicons',
+    event = 'VimEnter',
     config = function()
       local alpha = require('alpha')
       alpha.setup(require('alpha.themes.startify').config)
@@ -185,7 +186,7 @@ return {
 
   -- no more neck pain for focused work
   {
-    'folke/zen-mode.nvim',
+    'shortcuts/no-neck-pain.nvim',
     config = true,
   },
 

@@ -16,4 +16,11 @@ return {
 
   -- seamless navigation between tmux and vim panes
   'christoomey/vim-tmux-navigator',
+
+  -- jump around your finds like a kangaroo
+  {
+    'ggandor/flit.nvim',
+    dependencies = 'ggandor/leap.nvim',
+    config = true,
+  },
 }

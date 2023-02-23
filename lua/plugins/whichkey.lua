@@ -276,13 +276,9 @@ return {
 
         t = {
           name = 'Toggle',
-          z = {
-            '<cmd>ZenMode<cr>',
-            'Zen',
-          },
-          t = {
-            '<cmd>Twilight<cr>',
-            'Twilight',
+          f = {
+            '<cmd>NoNeckPain<cr>',
+            'Focus',
           },
         },
       }
