@@ -23,4 +23,7 @@ return {
     dependencies = 'ggandor/leap.nvim',
     config = true,
   },
+
+  -- basic configs for better experience
+  'tpope/vim-sensible'
 }
