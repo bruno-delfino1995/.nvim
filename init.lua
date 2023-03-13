@@ -22,6 +22,7 @@ require('lazy').setup('plugins', {
   },
 })
 
+require('user.neovide')
 require('user.options')
 require('user.keymaps')
 require('user.lsp')
